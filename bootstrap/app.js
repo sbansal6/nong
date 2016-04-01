@@ -74,5 +74,5 @@ module.exports = function(app) {
         extended: true
     }));
     app.disable('x-powered-by');
-    app.use(express.static(path.join(__dirname, '../api/public')));
+    app.use(express.static(path.join(__dirname, '../app/public')));
 }
