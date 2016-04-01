@@ -1,0 +1,29 @@
+<div class="voffset5">
+  <a href="users/add">Add new user</a>
+<div>
+<div class="voffset3">
+{{#if users}}
+  <table class="table table-striped voffset4" >
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Email</th>
+        <th>Access Token</th>
+        <th>Revoked</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each users}}
+        <tr> 
+          <td>{{math @index "+" 1}}</td>
+          <td>{{email}}</td>
+          <td>{{token}}</td>
+          <td>{{revoked}}</td>
+          <td><a href="users/{{_id}}">Edit</a></td>
+        </tr>
+      {{/each}}     
+    </tbody>
+  </table>
+{{/if}}
+</div>

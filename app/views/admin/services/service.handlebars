@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-6">
+  <form method="POST">
+    <input type="hidden" name="id" value="{{service._id}}">
+    <div class="form-group">
+      <label for="name">Service Name:</label>
+      <input type="text" class="form-control" name="name" value="{{service.name}}">
+    </div>
+    <div class="form-group">
+      <label for="path">Path:</label>
+      <input type="text" class="form-control" name="path" value="{{service.path}}">
+    </div>
+    <div class="form-group">
+      <label for="baseUrl">Base URL:</label>
+      <input type="text" class="form-control" name="baseUrl" value="{{service.baseUrl}}">
+    </div>
+    <div class="form-group">
+    <label>
+      <input type="checkbox" name="active" value="1" {{#if service.active}}checked{{/if}} {{#unless service}}checked{{/unless}}> Active
+    </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+</div>

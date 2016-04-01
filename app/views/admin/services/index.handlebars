@@ -1,0 +1,33 @@
+<div class="voffset5">
+  <a href="services/add">Add new service</a>
+<div>
+<div class="voffset3">
+{{#if services}}
+  <table class="table table-striped voffset4" >
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Service</th>
+        <th>Path</th>
+        <th>Base URL</th>
+        <th>Active</th>
+        <th>Updated</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each services}}
+        <tr> 
+          <td>{{math @index "+" 1}}</td>
+          <td>{{name}}</td>
+          <td>{{path}}</td>
+          <td>{{baseUrl}}</td>
+          <td>{{active}}</td>
+          <td>{{formatDate updated}}</td>
+          <td><a href="services/{{_id}}">Edit</a></td>
+        </tr>
+      {{/each}}     
+    </tbody>
+  </table>
+{{/if}}
+</div>

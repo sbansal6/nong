@@ -1,0 +1,9 @@
+{
+  "kong": {
+    "url": ""
+  },
+  "admin":{
+    "username": "admin",
+    "password" : "admin"
+  }
+}
