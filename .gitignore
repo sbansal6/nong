@@ -1,0 +1,9 @@
+test.js
+*.xml
+.DS_Store
+*.pyc
+node_modules/
+npm-debug.log
+.idea/
+.sonar/
+coverage/
